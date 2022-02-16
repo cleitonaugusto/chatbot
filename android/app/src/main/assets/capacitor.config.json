@@ -1,0 +1,6 @@
+{
+	"appId": "br.com.naun.finalz",
+	"appName": "FinalZ",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

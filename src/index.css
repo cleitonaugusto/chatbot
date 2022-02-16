@@ -1,0 +1,88 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** fonts **/
+@font-face {
+  font-family: 'Roboto';
+  src: URL('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #131c21;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #394045;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main-header,
+.main-footer 
+{
+  background-color: #015789;
+}
+.message-input
+{
+  background-color: #fff;
+}
+.message-option
+{
+  background: #fff;
+  color: #000;
+}
+.message-option:active{
+  background: #bebebe;
+}
+#chat-footer,
+#chat-header{
+  position: fixed;
+  width: 100%;
+}
+#chat-footer{
+  bottom: 0;
+}
+#chat-header{
+  top: 0;
+}
+.single-message {
+  background-color: #fff;
+  color: #000 !important;
+  box-shadow: 0 4px 8.5px #0000003d;
+}
+.single-message.user {
+  background-color: #c6e0f8;
+}
+.incoming-svg {
+  color: #fff;
+  transform: scaleX(-1);
+}
+.user-svg {
+  color: #c6e0f8;
+}
+.bg-chat {
+  background-image: url(./assets/bg-chat.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+#chat-footer svg,
+#chat-header svg
+{
+  color: #51585c;
+}
+.rounded-medium{
+  border-radius: 10px;
+}

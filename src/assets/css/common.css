@@ -1,0 +1,14 @@
+ul, ol {
+    list-style: disc !important;
+    margin: 0 0 0 1.5em !important;
+}
+ol {
+    list-style: auto !important;
+}
+.single-message li a {
+    color: #0c5dc0;
+    text-decoration: underline;
+}
+.w-100{
+    width:100%;
+}
