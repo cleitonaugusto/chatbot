@@ -1,4 +1,4 @@
-package br.com.naun.finalz;
+package br.jus.trt14.chatbot;
 
 import com.getcapacitor.BridgeActivity;
 

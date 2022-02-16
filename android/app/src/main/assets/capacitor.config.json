@@ -1,6 +1,6 @@
 {
-	"appId": "br.com.naun.finalz",
-	"appName": "FinalZ",
+	"appId": "br.jus.trt14.chatbot",
+	"appName": "chatbot",
 	"webDir": "dist",
 	"bundledWebRuntime": false
 }

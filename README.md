@@ -1,4 +1,4 @@
-# finalz
+# Chatbot
 
 ## Project setup
 ```
