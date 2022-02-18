@@ -12,10 +12,6 @@ const store = createStore({
                     id: 0,
                     name: 'TRT14',
                     profilePicture: require('@/assets/img/users/woman.png'),
-                    phoneNumber: '+372 626 1050',
-                    description: 'A Rússia é um lugar incrível para se viver 😁. Não quis aprender russo com meus pais, agora estou sofrendo para aprender 😅. Родина 🇷🇺',
-                    lastMessage: 'Abcd efgh ijklmno pq rstu vw xyz',
-                    lastMessageReaded: true,
                     possibleConversations: [
                         new Message({
                             id: 'm0',
@@ -87,13 +83,15 @@ const store = createStore({
                                     id: 'm1.2r1',
                                     message: 'Sim e gostaria de visualizar as informações na página de consulta processual do TRT14',
                                     sended: true,
-                                    goTo: 'https://consulta.trt14.jus.br/'
+                                    goTo: 'https://consulta.trt14.jus.br/',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.2r2',
                                     message: 'Sim, mas gostaria de falar com um atendente da atual Unidade responsável do processo',
                                     sended: true,
-                                    goTo: 'https://meet.google.com/inc-jeav-msw'
+                                    goTo: 'https://meet.google.com/inc-jeav-msw',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.2r3',
@@ -210,25 +208,29 @@ const store = createStore({
                                     id: 'm1.5r1',
                                     message: '1',
                                     sended: true,
-                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/521'
+                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/521',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.5r2',
                                     message: '1',
                                     sended: true,
-                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/519'
+                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/519',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.5r3',
                                     message: '1',
                                     sended: true,
-                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/523'
+                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/523',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.5r4',
                                     message: '4',
                                     sended: true,
-                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/525'
+                                    goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/525',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.5r5',
@@ -283,7 +285,8 @@ const store = createStore({
                                     id: 'm1.7r1',
                                     message: 'Sim',
                                     sended: true,
-                                    goTo: ''
+                                    goTo: '',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.7r2',
@@ -293,6 +296,18 @@ const store = createStore({
                                 })
                             ]
                         }),
+                        new Message({
+                            id: 'goTo.default',
+                            message: 'Você está sendo redirecionado.',
+                            options: [
+                                new Message({
+                                    id: 'goTo.default.r',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        })
                     ]
                 })
             ]

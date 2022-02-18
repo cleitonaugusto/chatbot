@@ -1,5 +1,5 @@
 <template>
-    <div id="chat-footer" class="main-footer sticky bottom-0 right-0 left-0 text-gray-400">
+    <div id="chat-footer" ref="footerChat" class="main-footer sticky bottom-0 right-0 left-0 text-gray-400">
         <template v-if="choiceTime">
             <div class="flex flex-wrap items-center px-4 py-1 m-1">
                 <template v-for="option in options" :key="option">
@@ -38,8 +38,8 @@ export default {
             default: 'horizontal'
         }
     },
-    mounted(){
-        console.log(this.direction)
+    updated(){
+        this.emitter.emit("footer-height-change", this.$refs.footerChat.offsetHeight);
     }
 }
 </script>

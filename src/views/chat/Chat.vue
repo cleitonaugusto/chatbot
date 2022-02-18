@@ -1,7 +1,7 @@
 <template>
     <div id="chat">
         <Header :isOnline="isOnline" :isTyping="isTyping" :user="{id: user.id, name:user.name, profilePicture: user.profilePicture}" />
-        <Body :messages="messages" :id="id" />
+        <Body :messages="messages" :id="id" :marginBottom="footerSize" />
         <Footer :choiceTime="user.choiceTime" :options="user.optionsConversation" :direction="messageReceived.direction"/>
     </div>
 </template>
@@ -38,6 +38,7 @@ export default {
             isOnline: true,
             isTyping: false,
             id: 0,
+            footerSize: 40,
             messageSelected: {},
             messageReceived: {}
         }
@@ -51,6 +52,8 @@ export default {
         }
     },
     mounted(){
+        const elFim = document.querySelector('#fim')
+
         if(!this.messages.length){
             this.user.setMessage(this.getAFriendMessage('m0'))
             this.isTyping = true
@@ -60,19 +63,55 @@ export default {
             }, 1000)
         }
 
+        //opção selecionada - mensagem enviada
         this.emitter.on("option-selected", messageSelected => {
+            toBottom(elFim.offsetTop)
             this.messageSelected = messageSelected
             const newMessage = this.user.getMessagePossibleConversation(messageSelected.next)
             this.user.setMessage(messageSelected)
             this.pushAFriendMessage(newMessage) //mensagem que eu recebo
             this.user.setChoiceTime(false)
+
+            if(messageSelected.goTo){
+                window.open(messageSelected.goTo, '_blank').focus();
+            }
+
         })
 
+        //mensagem recebida
         this.emitter.on("message-received", (message) => {
+            toBottom(elFim.offsetTop)
             this.messageReceived = message.message
             this.user.setOptionsConversation(message.options)
             this.user.setChoiceTime(true)
         })
+
+        this.emitter.on("footer-height-change", (heigth) => {
+            this.footerSize = heigth
+        })
+
+        const toBottom = (pos, time) => {
+            var currentPos = window.pageYOffset;
+            var start = null;
+            if(time == null) time = 500;
+            pos = +pos, time = +time;
+            window.requestAnimationFrame(function step(currentTime) {
+                start = !start ? currentTime : start;
+                var progress = currentTime - start;
+                if (currentPos < pos) {
+                    window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+                } else {
+                    window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+                }
+                if (progress < time) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    window.scrollTo(0, pos);
+                }
+            })
+        }
+
+        
     }
 }
 </script>
