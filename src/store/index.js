@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import MessageInput from '../entities/messageInput';
 import User from '../entities/user'
 import Message from './../entities/message'
 
@@ -110,6 +111,7 @@ const store = createStore({
                         new Message({
                             id: 'm1.2.3',
                             message: 'Sabe em qual vara ou cidade o processo tramita?',
+                            direction: 'vertical',
                             options: [
                                 new Message({
                                     id: 'm1.2.3r1',
@@ -121,7 +123,8 @@ const store = createStore({
                                     id: 'm1.2.3r2',
                                     message: 'Não sei. Solicitar atendimento virtual',
                                     sended: true,
-                                    next: 'mf1'
+                                    goTo: 'https://portal.trt14.jus.br/portal/atendimento-virtual/atermacao-online',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.2.3r3',
@@ -134,7 +137,11 @@ const store = createStore({
                         new Message({
                             id: 'm1.2',
                             message: 'Para qual Vara do Trabalho gostaria de atendimento?',
-                            acceptInput: true
+                            acceptInput: new MessageInput({
+                                has: true,
+                                placeholder: 'Informe o número do processo',
+                                processMask: true
+                            })
                         }),
                         new Message({
                             id: 'm1.3',
@@ -179,8 +186,9 @@ const store = createStore({
                                 <p>
                                     Contatos com o NPJe
                                     <ul>
-                                        <li>abc</li>
-                                        <li><a href="https://portal.trt14.jus.br/portal/pje/formulario-suporte" target="_blank">Formulário de chamado externo</a></li>
+                                        <li><a href="https://portal.trt14.jus.br/portal/pje/formulario-suporte">Formulário de atendimento</a></li>
+                                        <li><a href="https://meet.google.com/pso-utpr-tqm" target="_blank">Balcão de atendimento - SACLE</a></li>
+                                        <li>Telefone da SACLE - <a href="tel:+556932186378">(69) 3218-6378</a></li>
                                     </ul>
                                 </p>
                             `,
@@ -213,14 +221,14 @@ const store = createStore({
                                 }),
                                 new Message({
                                     id: 'm1.5r2',
-                                    message: '1',
+                                    message: '2',
                                     sended: true,
                                     goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/519',
                                     next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.5r3',
-                                    message: '1',
+                                    message: '3',
                                     sended: true,
                                     goTo: 'https://portal.trt14.jus.br/portal/balcao-virtual/unidades/523',
                                     next: 'goTo.default'
@@ -249,13 +257,14 @@ const store = createStore({
                                     id: 'm1.6r1',
                                     message: 'Obter contatos da ouvidoria',
                                     sended: true,
-                                    next: ''
+                                    next: 'm1.6.1'
                                 }),
                                 new Message({
                                     id: 'm1.6r2',
                                     message: 'Acessar a carta de serviços ao cidadão',
                                     sended: true,
-                                    goTo: 'https://portal.trt14.jus.br/portal/carta-servico-cidadao/364'
+                                    goTo: 'https://portal.trt14.jus.br/portal/carta-servico-cidadao/364',
+                                    next: 'goTo.default'
                                 }),
                                 new Message({
                                     id: 'm1.6r3',
@@ -267,7 +276,17 @@ const store = createStore({
                         }),
                         new Message({
                             id: 'm1.6.1',
-                            message: `Contatos da ouvidoria`,
+                            message: `
+                                Contatos da ouvidoria
+                                <ul>
+                                    <li><a href="https://portal.trt14.jus.br/portal/ouvidoria/formulario-manifestacao" target="_blank">Formulário eletrônico</a></li>
+                                    <li><b>Telefone Ouvidoria/SIC</b>: <a href="tel:+556932186369">(69) 3218-6369</a></li>
+                                    <li><a href="https://wa.me/556932186369" target="_blank">Whatsapp (69) 32186369</a></li>
+                                    <li><b>Horário de atendimento</b>: De segunda a sexta-feira das 7h30 às 14h30</li>
+                                    <li><b>E-mail</b>: <a href="mailto:ouvidoria@trt14.jus.br" title="Clique para enviar e-mail">ouvidoria@trt14.jus.br</a></li>
+                                    <li><b>Endereço presencial e postal</b>: Prédio-sede do Tribunal. Av. Almirante Barroso, no 600, Centro, Porto Velho (RO) - CEP: 76.801-901</li>
+                                </ul>
+                            `,
                             options: [
                                 new Message({
                                     id: 'm1.6.1r1',
@@ -280,12 +299,13 @@ const store = createStore({
                         new Message({
                             id: 'm1.7',
                             message: `Gostaria de ser direcionado para atendimento virtual?`,
+                            direction: 'vertical',
                             options: [
                                 new Message({
                                     id: 'm1.7r1',
                                     message: 'Sim',
                                     sended: true,
-                                    goTo: '',
+                                    goTo: 'https://meet.google.com/inc-jeav-msw',
                                     next: 'goTo.default'
                                 }),
                                 new Message({

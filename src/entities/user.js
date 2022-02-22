@@ -37,8 +37,7 @@ const User = class User{
             next: newMessage.next,
             options: newMessage.options,
             goTo: newMessage.goTo,
-            acceptInput: newMessage.acceptInput,
-            autoCompleteOptions: newMessage.autoCompleteOptions
+            input: newMessage.input
         })
         this.setLastMessage(newMessage.message)
     }
