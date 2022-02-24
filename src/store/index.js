@@ -137,10 +137,45 @@ const store = createStore({
                         new Message({
                             id: 'm1.2',
                             message: 'Para qual Vara do Trabalho gostaria de atendimento?',
-                            acceptInput: new MessageInput({
+                            input: new MessageInput({
                                 has: true,
                                 placeholder: 'Informe o número do processo',
-                                processMask: true
+                                autoCompleteOptions: [
+                                    {id: '1', descricao: '1ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '2', descricao: '2ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '3', descricao: '3ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '4', descricao: '4ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '5', descricao: '5ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '6', descricao: '6ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '7', descricao: '7ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '8', descricao: '8ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
+                                    {id: '31', descricao: '1ª VARA DO TRABALHO DE ARIQUEMES - RO', action: ''},
+                                    {id: '32', descricao: '2ª VARA DO TRABALHO DE ARIQUEMES - RO', action: ''},
+                                    {id: '41', descricao: 'VARA DO TRABALHO DE CACOAL - RO', action: ''},
+                                    {id: '51', descricao: 'VARA DO TRABALHO DE COLORADO DO OESTE - RO', action: ''},
+                                    {id: '61', descricao: 'VARA DO TRABALHO DE SÃO MIGUEL DO GUAPORÉ - RO', action: ''},
+                                    {id: '71', descricao: 'VARA DO TRABALHO DE GUAJARÁ MIRIM - RO', action: ''},
+                                    {id: '81', descricao: 'VARA DO TRABALHO DE JARU - RO', action: ''},
+                                    {id: '91', descricao: '1ª VARA DO TRABALHO DE JI-PARANÁ - RO', action: ''},
+                                    {id: '92', descricao: '2ª VARA DO TRABALHO DE JI-PARANÁ - RO', action: ''},
+                                    {id: '101', descricao: 'VARA DO TRABALHO DE OURO PRETO DO OESTE - RO', action: ''},
+                                    {id: '111', descricao: 'VARA DO TRABALHO DE PIMENTA BUENO - RO', action: ''},
+                                    {id: '121', descricao: 'VARA DO TRABALHO DE PRESIDENTE MÉDICI - RO', action: ''},
+                                    {id: '131', descricao: 'VARA DO TRABALHO DE ROLIM DE MOURA - RO', action: ''},
+                                    {id: '141', descricao: 'VARA DO TRABALHO DE VILHENA - RO', action: ''},
+                                    {id: '151', descricao: 'VARA DO TRABALHO DE BURITIS - RO', action: ''},
+                                    {id: '161', descricao: 'VARA DO TRABALHO DE MACHADINHO DO OESTE - RO', action: ''},
+                                    {id: '401', descricao: '1ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
+                                    {id: '402', descricao: '2ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
+                                    {id: '403', descricao: '3ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
+                                    {id: '404', descricao: '4ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
+                                    {id: '411', descricao: 'VARA DO TRABALHO DE EPITACIOLÂNDIA - AC', action: ''},
+                                    {id: '416', descricao: 'VARA DO TRABALHO DE CRUZEIRO DO SUL - AC', action: ''},
+                                    {id: '421', descricao: 'VARA DO TRABALHO DE FEIJÓ - AC', action: ''},
+                                    {id: '425', descricao: 'VARA DO TRABALHO DE PLÁCIDO DE CASTRO - AC', action: ''},
+                                    {id: '426', descricao: 'VARA DO TRABALHO DE SENA MADUREIRA - AC', action: ''},
+                                    {id: '431', descricao: 'VARA DO TRABALHO DE TARAUACÁ - AC', action: ''}
+                                ]
                             })
                         }),
                         new Message({

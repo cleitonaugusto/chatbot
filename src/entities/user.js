@@ -1,5 +1,5 @@
 const User = class User{
-    constructor({id, name, profilePicture, phoneNumber, description, lastMessage, lastMessageTime, lastMessageReaded, possibleConversations}){
+    constructor({id, name, profilePicture, phoneNumber, description, lastMessage, lastMessageTime, lastMessageReaded, possibleConversations, input}){
         this.id = id
         this.name = name
         this.profilePicture = profilePicture,
@@ -13,7 +13,8 @@ const User = class User{
         this.conversation = []
         this.possibleConversations = possibleConversations ?? []
         this.optionsConversation = []
-        this.choiceTime = false
+        this.choiceTime = false,
+        this.input = this.choiceTime ? false : input
     }
 
     setLastMessage(lastMessage){
@@ -40,6 +41,14 @@ const User = class User{
             input: newMessage.input
         })
         this.setLastMessage(newMessage.message)
+    }
+
+    setInput(input){
+        this.input = input
+    }
+
+    getInput(){
+        return this.input
     }
 
     getConversation(){

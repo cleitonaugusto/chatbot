@@ -8,19 +8,19 @@
             </div>
         </template>
         <template v-else>
-            <FooterChatFake />
+            <FooterChat />
         </template>
     </div>
 </template>
 
 <script>
 import MessageOption from '@/components/chat/MessageOption'
-import FooterChatFake from '../../../components/chat/FooterChatFake.vue'
+import FooterChat from '../../../components/chat/FooterChat.vue'
 
 export default {
     components: {
         MessageOption,
-        FooterChatFake
+        FooterChat
     },
     props: {
         choiceTime: {

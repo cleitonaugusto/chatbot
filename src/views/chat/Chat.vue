@@ -81,9 +81,14 @@ export default {
         //mensagem recebida
         this.emitter.on("message-received", (message) => {
             toBottom(elFim.offsetTop)
-            this.messageReceived = message.message
-            this.user.setOptionsConversation(message.options)
-            this.user.setChoiceTime(true)
+            if(message.message.input.has){
+                this.user.setChoiceTime(false)
+                this.user.setInput(message.message.input)
+            }else{
+                this.messageReceived = message.message
+                this.user.setOptionsConversation(message.options)
+                this.user.setChoiceTime(true)
+            }
         })
 
         this.emitter.on("footer-height-change", (heigth) => {
