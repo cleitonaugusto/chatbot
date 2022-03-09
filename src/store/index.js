@@ -140,7 +140,8 @@ const store = createStore({
                             input: new MessageInput({
                                 has: true,
                                 placeholder: 'Informe o número do processo',
-                                autoCompleteOptions: [
+                                select: true,
+                                options: [
                                     {id: '1', descricao: '1ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
                                     {id: '2', descricao: '2ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
                                     {id: '3', descricao: '3ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
@@ -160,7 +161,6 @@ const store = createStore({
                                     {id: '92', descricao: '2ª VARA DO TRABALHO DE JI-PARANÁ - RO', action: ''},
                                     {id: '101', descricao: 'VARA DO TRABALHO DE OURO PRETO DO OESTE - RO', action: ''},
                                     {id: '111', descricao: 'VARA DO TRABALHO DE PIMENTA BUENO - RO', action: ''},
-                                    {id: '121', descricao: 'VARA DO TRABALHO DE PRESIDENTE MÉDICI - RO', action: ''},
                                     {id: '131', descricao: 'VARA DO TRABALHO DE ROLIM DE MOURA - RO', action: ''},
                                     {id: '141', descricao: 'VARA DO TRABALHO DE VILHENA - RO', action: ''},
                                     {id: '151', descricao: 'VARA DO TRABALHO DE BURITIS - RO', action: ''},
@@ -173,8 +173,7 @@ const store = createStore({
                                     {id: '416', descricao: 'VARA DO TRABALHO DE CRUZEIRO DO SUL - AC', action: ''},
                                     {id: '421', descricao: 'VARA DO TRABALHO DE FEIJÓ - AC', action: ''},
                                     {id: '425', descricao: 'VARA DO TRABALHO DE PLÁCIDO DE CASTRO - AC', action: ''},
-                                    {id: '426', descricao: 'VARA DO TRABALHO DE SENA MADUREIRA - AC', action: ''},
-                                    {id: '431', descricao: 'VARA DO TRABALHO DE TARAUACÁ - AC', action: ''}
+                                    {id: '426', descricao: 'VARA DO TRABALHO DE SENA MADUREIRA - AC', action: ''}
                                 ]
                             })
                         }),
@@ -357,6 +356,673 @@ const store = createStore({
                             options: [
                                 new Message({
                                     id: 'goTo.default.r',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.1',
+                            message: `
+                                Dados de contato da 1ª Vara do Trabalho de Porto Velho
+                                <ul>
+                                    <li><a href="https://meet.google.com/iaz-zipc-ify" target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh1@trt14.jus.br">vtpvh1@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6348" title="Ligar">(69) 3218-6348</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556932186348" title="entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.1r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.2',
+                            message: `
+                                Dados de contato da 2ª Vara do Trabalho de Porto Velho
+                                <ul>
+                                    <li><a href="https://meet.google.com/mka-ptma-hjf" target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh2@trt14.jus.br">vtpvh2@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6358" title="Ligar">(69) 3218-6358</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.2r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.3',
+                            message: `
+                                Dados de contato da 3ª Vara do Trabalho de Porto Velho
+                                <ul>
+                                    <li><a href="https://meet.google.com/azf-dora-ujo" target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh3@trt14.jus.br">vtpvh3@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6379" title="Ligar">(69) 3218-6379</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6376" title="Ligar">(69) 3218-6376</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556932186376" title="entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.3r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.4',
+                            message: `
+                                Dados de contato da 4ª Vara do Trabalho de Porto Velho
+                                <ul>
+                                    <li><a href="https://meet.google.com/qag-djpa-zvu" target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh4@trt14.jus.br">vtpvh4@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6387" title="Ligar">(69) 3218-6387</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.4r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.5',
+                            message: `
+                                DADOS DE CONTATO DA 5ª VARA DO TRABALHO DE PORTO VELHO - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/nxu-dkas-zcf target="_blank">Balcão Virtual (MEET)</a>
+                                    </li><li><b>Email</b>: <a href="mailto:vtpvh5@trt14.jus.br">vtpvh5@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3218-6415" title="Ligar">(69) 3218-6415</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.5r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.6',
+                            message: `
+                                DADOS DE CONTATO DA 6ª VARA DO TRABALHO DE PORTO VELHO - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/zne-cvve-ouo target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh6@trt14.jus.br">vtpvh6@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3211-6657" title="Ligar">(69) 3211-6657</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.6r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.7',
+                            message: `
+                                DADOS DE CONTATO DA 7ª VARA DO TRABALHO DE PORTO VELHO - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/ckq-vjgc-gki target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh7@trt14.jus.br">vtpvh7@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3211-6304" title="Ligar">(69) 3211-6304</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3211-6301" title="Ligar">(69) 3211-6301</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.7r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.8',
+                            message: `
+                                DADOS DE CONTATO DA 8ª VARA DO TRABALHO DE PORTO VELHO - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/evi-skth-dsb target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpvh8@trt14.jus.br">vtpvh8@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3211-6307" title="Ligar">(69) 3211-6307</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556932116307" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Prudente de Morais, N° 2313, Mocambo, Porto Velho - RO, CEP: 76801-039</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.8r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.31',
+                            message: `
+                                DADOS DE CONTATO DA 1ª VARA DO TRABALHO DE ARIQUEMES - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/xij-rhmw-rzh target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtariquemes1@trt14.jus.br">vtariquemes1@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3516-2306" title="Ligar">(69) 3516-2306</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556935162306" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Av. Juscelino Kubitschek, Setor Industrial, Ariquemes - RO, CEP: 76872-853</li>
+                                </ul>'
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.31r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.32',
+                            message: `
+                                DADOS DE CONTATO DA 2ª VARA DO TRABALHO DE ARIQUEMES - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/eyo-jbfe-twq target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtariquemes2@trt14.jus.br">vtariquemes2@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3516-2301" title="Ligar">(69) 3516-2301</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99257-3233" title="Ligar">(69) 99257-3233</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/5569992573233" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Av. Juscelino Kubitschek, Setor Industrial, Ariquemes - RO, CEP: 76872-853</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.32r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.41',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE CACOAL - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/mdh-zjvm-fnk target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtcacoal@trt14.jus.br">vtcacoal@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3104" title="Ligar">(69) 99975-3104</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/5569999753104" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua General Osório, N° 427, Princesa Isabel, Cacoal - RO, CEP: 76964-030</li>
+                                </ul>                            
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.41r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.51',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE COLORADO DO OESTE - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/odg-ubyv-ksw?authuser=0 target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtcolorado@trt14.jus.br">vtcolorado@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3341-2582" title="Ligar">(69) 3341-2582</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3119" title="Ligar">(69) 99975-3119</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556933412582" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: AV. Paulo de Assis Ribeiro, N° 4061, Centro, Colorado do Oeste - RO, CEP: 76993-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.51r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.61',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE SÃO MIGUEL DO GUAPORÉ - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/xtq-sduk-htj target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtsaomiguel@trt14.jus.br">vtsaomiguel@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3188" title="Ligar">(69) 99975-3188</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3642-2115" title="Ligar">(69) 3642-2115</a></li>
+                                    <li><b>Endereço</b>: Rua 16 De Junho, 1365, Cristo Rei, São Miguel do Guaporé - RO, CEP: 76932-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.61r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.71',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE GUAJARÁ-MIRIM - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/xux-aziu-tvt target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtguajara@trt14.jus.br">vtguajara@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99358 2626" title="Ligar">(69) 99358 2626</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3126" title="Ligar">(69) 99975-3126</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 98432 8699" title="Ligar">(69) 98432 8699</a></li>
+                                    <li><b>Endereço</b>: AV. Novo Sertão, N° 1333, 10 de Abril, Guajará-Mirim - RO, CEP: 76850-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.71r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.81',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE JARU - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/api-xaes-zya target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtjaru@trt14.jus.br">vtjaru@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3128" title="Ligar">(69) 99975-3128</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/5569999753128" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Raimundo Cantanhêde, N° 1113, Setor 02, Jaru - RO, CEP: 76890-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.81r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.91',
+                            message: `
+                                DADOS DE CONTATO DA 1ª VARA DO TRABALHO DE JI-PARANÁ - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/srp-gpsf-omk target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtjipa@trt14.jus.br">vtjipa@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3416-8104" title="Ligar">(69) 3416-8104</a></li>
+                                    <li><b>Endereço</b>: Rua Monte Castelo, 1295, Jardim dos Migrantes, Ji-Paraná - RO, CEP: 76900-735</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.91r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.92',
+                            message: `
+                                DADOS DE CONTATO DA 2ª VARA DO TRABALHO DE JI-PARANÁ - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/zoy-zyox-gef target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtjipa2@trt14.jus.br">vtjipa2@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3416-8110" title="Ligar">(69) 3416-8110</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556934168110" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: 	Rua Monte Castelo, 1295, Jardim dos Migrantes, Ji-Paraná - RO, CEP: 76900-735</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.92r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.101',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE OURO PRETO DO OESTE - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/grb-irtf-usb target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtouropreto@trt14.jus.br">vtouropreto@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3461-2655" title="Ligar">(69) 3461-2655</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3156" title="Ligar">(69) 99975-3156</a></li>
+                                    <li><b>Endereço</b>: AV. 15 de Novembro, N° 1009, Uniaõ, Ouro Preto do Oeste - RO, CEP: 76920-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.101r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.111',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE PIMENTA BUENO - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/for-ajna-uwp target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtpbueno@trt14.jus.br">vtpbueno@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3157" title="Ligar">(69) 99975-3157</a></li>
+                                    <li><b>Endereço</b>: Rua Floriano Peixoto, 411, Centro, Pimenta Bueno - Ro, CEP: 76970-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.111r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.131',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE ROLIM DE MOURA - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/wuo-sngm-ygd target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtrolim@trt14.jus.br">vtrolim@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99236-1498" title="Ligar">(69) 99236-1498</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/6934421261" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Jaguaribe, 4329, Centro, Rolim de Moura - RO, CEP: 76940-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.131r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.141',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE VILHENA - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/yyb-vafz-rhh target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtvilhena@trt14.jus.br">vtvilhena@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3196" title="Ligar">(69) 99975-3196</a></li>
+                                    <li><b>Endereço</b>: Av. Rony de Castro Pereira, 3945, Jardim América, Vilhena - RO, CEP: 76980-000</li>
+                                </ul>                            
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.141r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.151',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE BURITIS - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/wak-evmv-qav target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtburitis@trt14.jus.br">vtburitis@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3093" title="Ligar">(69) 99975-3093</a></li>
+                                    <li><b>Endereço</b>: Rua Cerejeiras, N° 1342, Setor 01, Buritis - RO, CEP: 76880-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.151r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.161',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE MACHADINHO DOESTE - RO
+                                <ul>
+                                    <li><a href="https://meet.google.com/dur-fzkz-mbe target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtmachadinho@trt14.jus.br">vtmachadinho@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3153" title="Ligar">(69) 99975-3153</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/5569999753153" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Tocantins, N° 3097, Centro, Machadinho D'Oeste - RO, CEP: 76868-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.161r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.401',
+                            message: `
+                                DADOS DE CONTATO DA 1ª VARA DO TRABALHO DE RIO BRANCO - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/iyx-trcb-tcr target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtrbo1@trt14.jus.br">vtrbo1@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3216-5616" title="Ligar">(68) 3216-5616</a></li>
+                                    <li><b>Endereço</b>: Rua Benjamin Constant, N° 1121, Centro, Rio Branco - AC, CEP:69900-160</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.401r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        
+                        new Message({
+                            id: 'm1.2.402',
+                            message: `
+                                DADOS DE CONTATO DA 2ª VARA DO TRABALHO DE RIO BRANCO - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/qrf-yrkf-dyw target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtrbo2@trt14.jus.br">vtrbo2@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel: (68) 3216-5626" title="Ligar"> (68) 3216-5626</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556832165626" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Endereço</b>: Rua Benjamin Constant, N° 1121, Centro, Rio Branco - AC, CEP:69900-160</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.402r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        
+                        new Message({
+                            id: 'm1.2.403',
+                            message: `
+                                DADOS DE CONTATO DA 3ª VARA DO TRABALHO DE RIO BRANCO - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/xeq-qtot-brh target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtrbo3@trt14.jus.br">vtrbo3@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3216-5632" title="Ligar">(68) 3216-5632</a></li>
+                                    <li><b>Endereço</b>: Rua Benjamin Constant, N° 1121, Centro, Rio Branco - AC, CEP:69900-160</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.403r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.404',
+                            message: `
+                                DADOS DE CONTATO DA 4ª VARA DO TRABALHO DE RIO BRANCO - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/ecy-txgo-rgz target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtrbo4@trt14.jus.br">vtrbo4@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3216-5640" title="Ligar">(68) 3216-5640</a></li>
+                                    <li><b>Endereço</b>: Rua Benjamin Constant, N° 1121, Centro, Rio Branco - AC, CEP:69900-160</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.404r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.411',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE EPITACIOLÂNDIA - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/uon-eykd-zer target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtepitaciolandia@trt14.jus.br">vtepitaciolandia@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3546-3795" title="Ligar">(68) 3546-3795</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99971-1635" title="Ligar">(68) 99971-1635</a></li>
+                                    <li><b>Endereço</b>: BR 317, KM 01, N° 725, Aeroporto, Epitaciolândia - AC, CEP: 69934-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.411r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.416',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE CRUZEIRO DO SUL - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/fos-sbww-cbt target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtcruzeiro@trt14.jus.br">vtcruzeiro@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99971-1638" title="Ligar">(68) 99971-1638</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99986-1560" title="Ligar">(68) 99986-1560</a></li>
+                                    <li><b>Endereço</b>: Rua Rui Barbosa, N° 440 , Centro, Cruzeiro do Sul - AC, CEP: 69980-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.416r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.421',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE FEIJÓ - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/myj-djbd-qfk target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtfeijo@trt14.jus.br">vtfeijo@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99971-1646" title="Ligar">(68) 99971-1646</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3463-2058" title="Ligar">(68) 3463-2058</a></li>
+                                    <li><b>Endereço</b>: Rua Anastácio Barroso, N° 344, Centro, Feijó - AC, CEP: 69960-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.421r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.425',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE PLÁCIDO DE CASTRO - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/jts-qttv-sev target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtplacido@trt14.jus.br">vtplacido@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99971-1640" title="Ligar">(68) 99971-1640</a></li>
+                                    <li><b>Endereço</b>: Av. Epitácio Pessoa, 288, Centro, Plácido de Castro - AC, CEP: 69928-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.425r1',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.2.426',
+                            message: `
+                                DADOS DE CONTATO DA VARA DO TRABALHO DE SENA MADUREIRA - AC
+                                <ul>
+                                    <li><a href="https://meet.google.com/exi-orio-hoq target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><b>Email</b>: <a href="mailto:vtsena@trt14.jus.br">vtsena@trt14.jus.br</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3212-2363" title="Ligar">(68) 3212-2363</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 3612-2633" title="Ligar">(68) 3612-2633</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(68) 99971-1647" title="Ligar">(68) 99971-1647</a></li>
+                                    <li><b>Endereço</b>: Rua Virgulino de Alencar, 235, Centro, Sena Madureira - AC, CEP: 69940-000</li>
+                                </ul>
+                            `,
+                            options: [
+                                new Message({
+                                    id: 'm1.2.426r1',
                                     message: 'Voltar ao menu principal',
                                     sended: true,
                                     next: 'm1'

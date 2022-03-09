@@ -3,7 +3,22 @@
         <div class="flex-grow">
             <div class="px-4 py-2 w-full">
                 <div class="relative text-gray-600 focus-within:text-gray-200">
-                    <input type="text" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Digite uma mensagem" autocomplete="off" disabled>
+                    <template v-if="input.has">
+                        <template v-if="input.select">
+                            <select class="message-input w-full py-3 text-sm rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" v-model="inputData">
+                                <option value="">Escolha a vara do trabalho</option>
+                                <template v-for="option in input.options" :key="option">
+                                    <option :value="option.id">{{option.descricao}}</option>
+                                </template>
+                            </select>
+                        </template>                    
+                        <template v-else>
+                            <input type="text" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Digite uma mensagem">
+                        </template>
+                    </template>
+                    <template v-else>
+                        <input type="text" class="disabled message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Digite uma mensagem" autocomplete="off" disabled>
+                    </template>
                 </div>
             </div>
         </div>
@@ -15,6 +30,17 @@
 
 <script>
 export default {
-    
+    props: ['input'],
+    data(){
+        return {
+            inputData: ""
+        }
+    }
 }
 </script>
+
+<style scoped>
+    input.disabled {
+        background: #dbdbdb;
+    }
+</style>

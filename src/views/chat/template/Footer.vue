@@ -8,7 +8,7 @@
             </div>
         </template>
         <template v-else>
-            <FooterChat />
+            <FooterChat :input="input" />
         </template>
     </div>
 </template>
@@ -36,6 +36,9 @@ export default {
         direction: {
             type: String,
             default: 'horizontal'
+        },
+        input: {
+            default: false
         }
     },
     updated(){

@@ -2,7 +2,7 @@
     <div id="chat">
         <Header :isOnline="isOnline" :isTyping="isTyping" :user="{id: user.id, name:user.name, profilePicture: user.profilePicture}" />
         <Body :messages="messages" :id="id" :marginBottom="footerSize" />
-        <Footer :choiceTime="user.choiceTime" :options="user.optionsConversation" :direction="messageReceived.direction"/>
+        <Footer :choiceTime="user.choiceTime" :options="user.optionsConversation" :direction="messageReceived.direction" :input="input"/>
     </div>
 </template>
 
@@ -40,7 +40,8 @@ export default {
             id: 0,
             footerSize: 40,
             messageSelected: {},
-            messageReceived: {}
+            messageReceived: {},
+            input: false
         }
     },
     computed: {
@@ -81,9 +82,10 @@ export default {
         //mensagem recebida
         this.emitter.on("message-received", (message) => {
             toBottom(elFim.offsetTop)
+
             if(message.message.input.has){
                 this.user.setChoiceTime(false)
-                this.user.setInput(message.message.input)
+                this.input = message.message.input
             }else{
                 this.messageReceived = message.message
                 this.user.setOptionsConversation(message.options)
