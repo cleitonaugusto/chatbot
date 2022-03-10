@@ -13,7 +13,7 @@
                             </select>
                         </template>                    
                         <template v-else>
-                            <input type="text" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Digite uma mensagem">
+                            <input type="text" v-model="processo" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" :placeholder="input.placeholder">
                         </template>
                     </template>
                     <template v-else>
@@ -23,17 +23,38 @@
             </div>
         </div>
         <div class="flex-none text-right text-white">
-            <img src="../../assets/img/send.png" style="width: 24px;margin-right: .5em;">
+            <img src="../../assets/img/send.png" style="width: 24px;margin-right: .5em;" @click="sendMessage">
         </div>
     </div>
 </template>
 
-<script>
+<script type="module">
+import Message from './../../entities/message'
+
 export default {
-    props: ['input'],
+    props: {
+        input: {
+            required: false,
+            default: undefined
+        }
+    },
     data(){
         return {
-            inputData: ""
+            inputData: "",
+            processo: ""
+        }
+    },
+    methods: {
+        sendMessage(){
+            if(this.input){
+                const messageSelected = this.input.options.find(message => message.id === this.inputData)
+                this.emitter.emit("option-selected", new Message({
+                    id: `opt${this.inputData}`,
+                    message: messageSelected.descricao,
+                    sended: true,
+                    next: messageSelected.next
+                }));
+            }
         }
     }
 }

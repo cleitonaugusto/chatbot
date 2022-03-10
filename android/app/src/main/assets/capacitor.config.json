@@ -1,6 +1,0 @@
-{
-	"appId": "br.jus.trt14.chatbot",
-	"appName": "chatbot",
-	"webDir": "dist",
-	"bundledWebRuntime": false
-}

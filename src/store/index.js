@@ -91,8 +91,7 @@ const store = createStore({
                                     id: 'm1.2r2',
                                     message: 'Sim, mas gostaria de falar com um atendente da atual Unidade responsável do processo',
                                     sended: true,
-                                    goTo: 'https://meet.google.com/inc-jeav-msw',
-                                    next: 'goTo.default'
+                                    next: 'm.pi.1'
                                 }),
                                 new Message({
                                     id: 'm1.2r3',
@@ -117,7 +116,7 @@ const store = createStore({
                                     id: 'm1.2.3r1',
                                     message: 'Sim',
                                     sended: true,
-                                    next: 'mf1'
+                                    next: 'm.1'
                                 }),
                                 new Message({
                                     id: 'm1.2.3r2',
@@ -142,38 +141,38 @@ const store = createStore({
                                 placeholder: 'Informe o número do processo',
                                 select: true,
                                 options: [
-                                    {id: '1', descricao: '1ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '2', descricao: '2ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '3', descricao: '3ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '4', descricao: '4ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '5', descricao: '5ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '6', descricao: '6ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '7', descricao: '7ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '8', descricao: '8ª VARA DO TRABALHO DE PORTO VELHO - RO', action: ''},
-                                    {id: '31', descricao: '1ª VARA DO TRABALHO DE ARIQUEMES - RO', action: ''},
-                                    {id: '32', descricao: '2ª VARA DO TRABALHO DE ARIQUEMES - RO', action: ''},
-                                    {id: '41', descricao: 'VARA DO TRABALHO DE CACOAL - RO', action: ''},
-                                    {id: '51', descricao: 'VARA DO TRABALHO DE COLORADO DO OESTE - RO', action: ''},
-                                    {id: '61', descricao: 'VARA DO TRABALHO DE SÃO MIGUEL DO GUAPORÉ - RO', action: ''},
-                                    {id: '71', descricao: 'VARA DO TRABALHO DE GUAJARÁ MIRIM - RO', action: ''},
-                                    {id: '81', descricao: 'VARA DO TRABALHO DE JARU - RO', action: ''},
-                                    {id: '91', descricao: '1ª VARA DO TRABALHO DE JI-PARANÁ - RO', action: ''},
-                                    {id: '92', descricao: '2ª VARA DO TRABALHO DE JI-PARANÁ - RO', action: ''},
-                                    {id: '101', descricao: 'VARA DO TRABALHO DE OURO PRETO DO OESTE - RO', action: ''},
-                                    {id: '111', descricao: 'VARA DO TRABALHO DE PIMENTA BUENO - RO', action: ''},
-                                    {id: '131', descricao: 'VARA DO TRABALHO DE ROLIM DE MOURA - RO', action: ''},
-                                    {id: '141', descricao: 'VARA DO TRABALHO DE VILHENA - RO', action: ''},
-                                    {id: '151', descricao: 'VARA DO TRABALHO DE BURITIS - RO', action: ''},
-                                    {id: '161', descricao: 'VARA DO TRABALHO DE MACHADINHO DO OESTE - RO', action: ''},
-                                    {id: '401', descricao: '1ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
-                                    {id: '402', descricao: '2ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
-                                    {id: '403', descricao: '3ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
-                                    {id: '404', descricao: '4ª VARA DO TRABALHO DE RIO BRANCO - AC', action: ''},
-                                    {id: '411', descricao: 'VARA DO TRABALHO DE EPITACIOLÂNDIA - AC', action: ''},
-                                    {id: '416', descricao: 'VARA DO TRABALHO DE CRUZEIRO DO SUL - AC', action: ''},
-                                    {id: '421', descricao: 'VARA DO TRABALHO DE FEIJÓ - AC', action: ''},
-                                    {id: '425', descricao: 'VARA DO TRABALHO DE PLÁCIDO DE CASTRO - AC', action: ''},
-                                    {id: '426', descricao: 'VARA DO TRABALHO DE SENA MADUREIRA - AC', action: ''}
+                                    {id: '1', descricao: '1ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.1'},
+                                    {id: '2', descricao: '2ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.2'},
+                                    {id: '3', descricao: '3ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.3'},
+                                    {id: '4', descricao: '4ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.4'},
+                                    {id: '5', descricao: '5ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.5'},
+                                    {id: '6', descricao: '6ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.6'},
+                                    {id: '7', descricao: '7ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.7'},
+                                    {id: '8', descricao: '8ª VARA DO TRABALHO DE PORTO VELHO - RO', next: 'm1.2.8'},
+                                    {id: '31', descricao: '1ª VARA DO TRABALHO DE ARIQUEMES - RO', next: 'm1.2.31'},
+                                    {id: '32', descricao: '2ª VARA DO TRABALHO DE ARIQUEMES - RO', next: 'm1.2.32'},
+                                    {id: '41', descricao: 'VARA DO TRABALHO DE CACOAL - RO', next: 'm1.2.41'},
+                                    {id: '51', descricao: 'VARA DO TRABALHO DE COLORADO DO OESTE - RO', next: 'm1.2.51'},
+                                    {id: '61', descricao: 'VARA DO TRABALHO DE SÃO MIGUEL DO GUAPORÉ - RO', next: 'm1.2.61'},
+                                    {id: '71', descricao: 'VARA DO TRABALHO DE GUAJARÁ MIRIM - RO', next: 'm1.2.71'},
+                                    {id: '81', descricao: 'VARA DO TRABALHO DE JARU - RO', next: 'm1.2.81'},
+                                    {id: '91', descricao: '1ª VARA DO TRABALHO DE JI-PARANÁ - RO', next: 'm1.2.91'},
+                                    {id: '92', descricao: '2ª VARA DO TRABALHO DE JI-PARANÁ - RO', next: 'm1.2.92'},
+                                    {id: '101', descricao: 'VARA DO TRABALHO DE OURO PRETO DO OESTE - RO', next: 'm1.2.101'},
+                                    {id: '111', descricao: 'VARA DO TRABALHO DE PIMENTA BUENO - RO', next: 'm1.2.111'},
+                                    {id: '131', descricao: 'VARA DO TRABALHO DE ROLIM DE MOURA - RO', next: 'm1.2.131'},
+                                    {id: '141', descricao: 'VARA DO TRABALHO DE VILHENA - RO', next: 'm1.2.141'},
+                                    {id: '151', descricao: 'VARA DO TRABALHO DE BURITIS - RO', next: 'm1.2.151'},
+                                    {id: '161', descricao: 'VARA DO TRABALHO DE MACHADINHO DO OESTE - RO', next: 'm1.2.161'},
+                                    {id: '401', descricao: '1ª VARA DO TRABALHO DE RIO BRANCO - AC', next: 'm1.2.401'},
+                                    {id: '402', descricao: '2ª VARA DO TRABALHO DE RIO BRANCO - AC', next: 'm1.2.402'},
+                                    {id: '403', descricao: '3ª VARA DO TRABALHO DE RIO BRANCO - AC', next: 'm1.2.403'},
+                                    {id: '404', descricao: '4ª VARA DO TRABALHO DE RIO BRANCO - AC', next: 'm1.2.404'},
+                                    {id: '411', descricao: 'VARA DO TRABALHO DE EPITACIOLÂNDIA - AC', next: 'm1.2.411'},
+                                    {id: '416', descricao: 'VARA DO TRABALHO DE CRUZEIRO DO SUL - AC', next: 'm1.2.416'},
+                                    {id: '421', descricao: 'VARA DO TRABALHO DE FEIJÓ - AC', next: 'm1.2.421'},
+                                    {id: '425', descricao: 'VARA DO TRABALHO DE PLÁCIDO DE CASTRO - AC', next: 'm1.2.425'},
+                                    {id: '426', descricao: 'VARA DO TRABALHO DE SENA MADUREIRA - AC', next: 'm1.2.426'}
                                 ]
                             })
                         }),
@@ -1028,7 +1027,16 @@ const store = createStore({
                                     next: 'm1'
                                 })
                             ]
-                        })
+                        }),
+                        new Message({
+                            id: 'm.pi.1',
+                            message: 'Informe o número de seu processo',
+                            input: new MessageInput({
+                                has: true,
+                                placeholder: 'Informe o número do processo',
+                                processMask: true
+                            })
+                        }),
                     ]
                 })
             ]
