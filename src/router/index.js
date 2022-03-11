@@ -2,15 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
-        path: '/',
-        redirect: '/chat'
-    },
-    { 
-        path: '/chat', 
+        path: '',
         component: () => import('./../views/chat/Chat.vue'),
         props: true
     }
-
 ]
 
 const router = createRouter({

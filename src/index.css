@@ -46,11 +46,13 @@
 .message-option:active{
   background: #bebebe;
 }
+
 #chat-footer,
 #chat-header{
   position: fixed;
   width: 100%;
 }
+
 #chat-footer{
   bottom: 0;
 }

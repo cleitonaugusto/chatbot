@@ -29,8 +29,8 @@ export default {
                 setTimeout(() => {
                     this.isTyping = false
                     this.user.setMessage(message)
-                }, this.randomTime(500, 2000));
-            }, this.randomTime(500, 2000))
+                }, this.randomTime(500, 1000));
+            }, this.randomTime(500, 1000))
         }
     },
     data(){
@@ -74,7 +74,9 @@ export default {
             this.user.setChoiceTime(false)
 
             if(messageSelected.goTo){
-                window.open(messageSelected.goTo, '_blank').focus();
+                setTimeout(()=>{
+                    window.open(messageSelected.goTo, '_blank').focus();
+                }, this.randomTime(2000,3000))
             }
 
         })
