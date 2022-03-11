@@ -56,12 +56,18 @@ const User = class User{
     }
 
     getMessagePossibleConversation(messageId){
-        const message = this.possibleConversations.find((message) => message.id === messageId)
+        let message = this.possibleConversations.find((message) => message.id === messageId)
+        if(!message){
+            message = this.possibleConversations.find((message) => message.id === 'notFound404')
+        }
         return message ?? ''
     }
 
     getConversationsOptions(idMessage){
-        const message = this.possibleConversations.find((message) => message.id == idMessage)
+        let message = this.possibleConversations.find((message) => message.id == idMessage)
+        if(!message){
+            message = this.possibleConversations.find((message) => message.id === 'notFound404')
+        }
         return message ? message.options : []
     }
 

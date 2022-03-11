@@ -8,12 +8,16 @@ import './assets/tailwind.css'
 import mitt from 'mitt';
 import '@mdi/font/css/materialdesignicons.css'
 import './assets/css/common.css'
+import Maska from 'maska'
 
 const emitter = mitt();
 
 const app = createApp(App)
 app.use(router)
 app.use(store)
+
+app.use(Maska)
+app.directive('maska', Maska.maska)
 
 app.config.globalProperties.emitter = emitter;
 

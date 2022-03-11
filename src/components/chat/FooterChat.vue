@@ -13,7 +13,7 @@
                             </select>
                         </template>                    
                         <template v-else>
-                            <input type="text" v-model="processo" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" :placeholder="input.placeholder">
+                            <input type="text" v-model="processo" class="message-input w-full py-3 text-sm text-white rounded-full pl-5 focus:outline-none focus:bg-white focus:text-gray-900" v-maska="'#######-##.####.#.##.####'" :placeholder="input.placeholder">
                         </template>
                     </template>
                     <template v-else>
@@ -47,13 +47,26 @@ export default {
     methods: {
         sendMessage(){
             if(this.input){
-                const messageSelected = this.input.options.find(message => message.id === this.inputData)
-                this.emitter.emit("option-selected", new Message({
-                    id: `opt${this.inputData}`,
-                    message: messageSelected.descricao,
-                    sended: true,
-                    next: messageSelected.next
-                }));
+                if(this.input.select){
+                    const messageSelected = this.input.options.find(message => message.id === this.inputData)
+                    this.emitter.emit("option-selected", new Message({
+                        id: `opt${this.inputData}`,
+                        message: messageSelected.descricao,
+                        sended: true,
+                        next: messageSelected.next
+                    }));
+                }else{
+                    let partes = this.processo.split('.')
+                    if(partes[4]){
+                        let varaId = Number(partes[4])
+                        this.emitter.emit("option-selected", new Message({
+                            id: `ip.${parseInt(Math.random()*100)}`,
+                            message: `Processo: ${this.processo}`,
+                            sended: true,
+                            next: `m1.2.${varaId}`
+                        }))
+                    }
+                }
             }
         }
     }

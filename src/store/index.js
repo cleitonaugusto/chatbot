@@ -116,7 +116,7 @@ const store = createStore({
                                     id: 'm1.2.3r1',
                                     message: 'Sim',
                                     sended: true,
-                                    next: 'm.1'
+                                    next: 'm1.2'
                                 }),
                                 new Message({
                                     id: 'm1.2.3r2',
@@ -1037,6 +1037,26 @@ const store = createStore({
                                 processMask: true
                             })
                         }),
+                        new Message({
+                            id: `notFound404`,
+                            message: 'Não encontramos o que está procurando. Por favor, tente novamente ou entre em contato com a nossa ouvidoria.',
+                            sended: false,
+                            direction: 'vertical',
+                            options: [
+                                new Message({
+                                    id: 'notFound404.r1',
+                                    message: 'Obter contatos da ouvidoria',
+                                    sended: true,
+                                    next: 'm1.6.1'
+                                }),
+                                new Message({
+                                    id: 'notFound404.r2',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        })
                     ]
                 })
             ]
