@@ -2,7 +2,7 @@
     <div id="chat-header" class="main-header z-40 sticky top-0 right-0 left-0 text-gray-400">
         <div class="flex items-center px-4 py-3">
          <div class="flex-auto">
-            <div class="flex">
+            <div class="flex" id="info-person">
                 <div class="flex-row ml-3 mr-4">
                     <div class="flex">
                         <img class="w-11 h-11 rounded-full" :src="user.profilePicture">
@@ -38,3 +38,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    #info-person{
+        z-index: 2;
+    }
+</style>

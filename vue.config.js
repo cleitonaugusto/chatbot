@@ -1,4 +1,4 @@
 module.exports = {
-    //publicPath: '/hml-chatbot'
-    publicPath: '/chatbot'
+    publicPath: '/hml-chatbot'
+    //publicPath: '/chatbot'
 }
