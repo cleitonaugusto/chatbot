@@ -12,7 +12,7 @@ const store = createStore({
                 new User({
                     id: 0,
                     name: 'Raíra',
-                    profilePicture: require('@/assets/img/users/woman.png'),
+                    profilePicture: require('@/assets/img/users/raira.png'),
                     possibleConversations: [
                         new Message({
                             id: 'm0',
