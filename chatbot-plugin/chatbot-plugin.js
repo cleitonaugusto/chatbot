@@ -1,7 +1,7 @@
 let _chatbotState = {
     isShow: false,
-    iframeSrc: "http://localhost/chatbot/",
-    personPic: "http://localhost/chatbot/img/raira.d2ceab22.jpg"
+    iframeSrc: "https://appserver1.trt14.jus.br/hml-chatbot/",
+    personPic: "https://appserver1.trt14.jus.br/hml-chatbot/img/raira.d2ceab22.jpg"
 }
 
 const portalBody = document.querySelector('body')
