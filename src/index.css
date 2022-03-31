@@ -43,6 +43,7 @@
   background: #fff;
   color: #000;
   z-index: 2;
+  cursor: pointer;
 }
 .message-option:active{
   background: #bebebe;

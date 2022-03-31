@@ -22,6 +22,7 @@ const store = createStore({
                         new Message({
                             id: 'm1',
                             message: `
+                            <p class="mb-2">Para qual serviço você deseja atendimento? Clique no número correspondente abaixo!</p> 
                             <p class="mb-2"><b>1.</b> Informação sobre um processo Judicial?</p>
                             <p class="mb-2"><b>2.</b> Gostaria de falar diretamente com uma Vara do Trabalho?</p>
                             <p class="mb-2"><b>3.</b> Informações gerais e sobre como ajuizar uma nova ação sem advogado?</p>

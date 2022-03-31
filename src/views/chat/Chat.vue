@@ -61,7 +61,7 @@ export default {
             setTimeout(()=>{
                 this.user.setMessage(this.getAFriendMessage('m1'))
                 this.isTyping = false
-            }, 1000)
+            }, this.randomTime(500, 2000))
         }
 
         //opção selecionada - mensagem enviada

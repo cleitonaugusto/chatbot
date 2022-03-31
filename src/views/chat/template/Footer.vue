@@ -42,7 +42,7 @@ export default {
         }
     },
     updated(){
-        this.emitter.emit("footer-height-change", this.$refs.footerChat.offsetHeight);
+        this.emitter.emit("footer-height-change", this.$refs.footerChat.offsetHeight - 68);
     }
 }
 </script>
