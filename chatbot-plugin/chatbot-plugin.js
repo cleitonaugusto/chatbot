@@ -3,6 +3,7 @@ const portalDivIframe = document.createElement("div")
 const portalIframe = document.createElement("iframe")
 const chatBotMessage = document.createElement("div")
 const chatbotCall = document.createElement("div")
+const chatbotMessageClose = document.createElement("div")
 const chatbotState = {
     isShow: false,
     iframeSrc: "https://appserver1.trt14.jus.br/hml-chatbot/",
@@ -13,8 +14,6 @@ const chatbotState = {
     ],
     countClick: 0
 }
-
-chatbot()
 
 async function chatbot(){
     portalDivIframe.classList.add('chatbot-div-iframe')
@@ -43,13 +42,17 @@ async function chatbot(){
             if(!chatbotState.isShow){
                 chatBotMessage.innerHTML = chatbotState.messages[1].message
                 chatBotMessage.classList.add('presentation-position')
+                messageCloseMobile()
                 setTimeout(() => {
                     chatBotMessage.classList.remove('presentation-position')                
                 }, 5000 + 600);    
             }
         }, 600)
+
         chatbotState.countClick++
     })
+
+    messageCloseMobile()
     
     portalBody.append(chatbotCall)
     portalBody.append(chatBotMessage)
@@ -59,3 +62,39 @@ async function chatbot(){
         chatBotMessage.classList.add('presentation-position')
     }, 1000)
 }
+
+
+function messageCloseMobile(){
+    if(screen.width <= 480) {
+        chatbotMessageClose.id = 'chatbot-msg-close'
+        chatbotMessageClose.innerHTML = 'x'
+        chatBotMessage.append(chatbotMessageClose)
+        chatbotMessageClose.addEventListener('click', callOpacity)        
+        chatbotMessageClose.addEventListener('click', callOpacity)        
+    }
+}
+
+const callOpacity = () => {
+        fadeOutEffect(chatBotMessage)
+        chatbotCall.classList.add('chatbot-call-opacity')
+        portalDivIframe.classList.add('chatbot-call-opacity-active')
+        setTimeout(() => {
+            chatBotMessage.classList.add('chatbot-d-none')
+            chatbotMessageClose.classList.add('chatbot-d-none')
+        }, 500)
+}
+
+const fadeOutEffect = (fadeTarget) => {
+    const fadeEffect = setInterval(() => {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1
+        } else {
+            clearInterval(fadeEffect)
+        }
+    }, 10)
+}
+
+chatbot()
