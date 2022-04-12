@@ -190,13 +190,13 @@ const store = createStore({
                                             <ul>
                                                 <li>Rondônia
                                                     <ol>
-                                                        <li><a href="https://wa.me/69999622907" target="_blank"><b>WhatsApp</b> – (69) 99962-2907</a></li>
+                                                        <li><a href="https://wa.me/5569999622907" target="_blank"><b>WhatsApp</b> – (69) 99962-2907</a></li>
                                                         <li><b>Telefone fixo</b> - (69) 3218-6342</li>
                                                     </ol>
                                                 </li>
                                                 <li>Acre
                                                     <ol>
-                                                        <li><a href="https://wa.me/68999147360" target="_blank"><b>WhatsApp</b> – (68) 99914-7360</a></li>
+                                                        <li><a href="https://wa.me/5568999147360" target="_blank"><b>WhatsApp</b> – (68) 99914-7360</a></li>
                                                         <li><b>Telefone fixo</b> - (68) 3216-5603</li>
                                                     </ol>
                                                 </li>
@@ -787,7 +787,7 @@ const store = createStore({
                                     <li><a href="https://meet.google.com/wuo-sngm-ygd" target="_blank">Balcão Virtual (MEET)</a></li>
                                     <li><b>Email</b>: <a href="mailto:vtrolim@trt14.jus.br">vtrolim@trt14.jus.br</a></li>
                                     <li><b>Telefone</b>: <a href="tel:(69) 99236-1498" title="Ligar">(69) 99236-1498</a></li>
-                                    <li><b>Whatsapp</b>: <a href="https://wa.me/6934421261" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/556934421261" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
                                     <li><b>Horário de atendimento</b>: Segunda a sexta, das 7:30 às 14:30 em seu horário local.</li>
                                     <li><b>Endereço</b>: Rua Jaguaribe, 4329, Centro, Rolim de Moura - RO, CEP: 76940-000</li>
                                 </ul>
