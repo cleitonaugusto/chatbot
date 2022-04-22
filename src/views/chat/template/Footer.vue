@@ -46,3 +46,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .mx-3{
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+    }
+</style>

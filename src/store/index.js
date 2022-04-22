@@ -29,7 +29,8 @@ const store = createStore({
                             <p class="mb-2"><b>4.</b> Problemas ou informações sobre o Sistema PJe?</p>
                             <p class="mb-2"><b>5.</b> Contatar Unidade Judicial de Apoio, Gabinete de Desembargador, ou Unidade Administrativa?</p>
                             <p class="mb-2"><b>6.</b> Acessar o Serviço de Informação ao Cidadão ou Ouvidoria</p>
-                            <p class="mb-2"><b>7.</b> Não localizei a opção de interesse.</p>
+                            <p class="mb-2"><b>7.</b> Ver informações sobre Precatórios e RPVs (Requisições de Pequeno Valor)</p>
+                            <p class="mb-2"><b>8.</b> Não localizei a opção de interesse.</p>
                             `,
                             options: [
                                 new Message({
@@ -73,6 +74,12 @@ const store = createStore({
                                     message: '7',
                                     sended: true,
                                     next: 'm1.7'
+                                }),
+                                new Message({
+                                    id: 'm1r8',
+                                    message: '8',
+                                    sended: true,
+                                    next: 'm1.8'
                                 })
                             ]
                         }),
@@ -333,18 +340,59 @@ const store = createStore({
                         }),
                         new Message({
                             id: 'm1.7',
-                            message: `Gostaria de ser direcionado para atendimento virtual?`,
+                            message: `Nós temos algumas opções sobre Precatórios e RPVs, escolha a que melhor lhe atender.`,
                             direction: 'vertical',
                             options: [
                                 new Message({
                                     id: 'm1.7r1',
+                                    message: 'Ver ordem cronológica do Regime Geral',
+                                    sended: true,
+                                    goTo: 'https://portal.trt14.jus.br/portal/precatorios/ordem-cronologica-regime-geral',
+                                    next: 'goTo.default'
+                                }),
+                                new Message({
+                                    id: 'm1.7r2',
+                                    message: 'Ver ordem cronológica do Regime Especial - Rondônia',
+                                    sended: true,
+                                    goTo: 'https://www.tjro.jus.br/resp-precatorios',
+                                    next: 'goTo.default'
+                                }),
+                                new Message({
+                                    id: 'm1.7r3',
+                                    message: 'Ver ordem cronológica do Regime Especial - Acre',
+                                    sended: true,
+                                    goTo: 'https://www.tjac.jus.br/adm/sepre/consulta-da-ordem-cronologica/',
+                                    next: 'goTo.default'
+                                }),
+                                new Message({
+                                    id: 'm1.7r4',
+                                    message: 'Ver RPVs Federais, Estaduais e Municipais no PJe',
+                                    sended: true,
+                                    goTo: 'https://pje.trt14.jus.br/gprec-frontend/rpv',
+                                    next: 'goTo.default'
+                                }),
+                                new Message({
+                                    id: 'm1.7r6',
+                                    message: 'Voltar ao menu principal',
+                                    sended: true,
+                                    next: 'm1'
+                                })
+                            ]
+                        }),
+                        new Message({
+                            id: 'm1.8',
+                            message: `Gostaria de ser direcionado para atendimento virtual?`,
+                            direction: 'vertical',
+                            options: [
+                                new Message({
+                                    id: 'm1.8r1',
                                     message: 'Sim',
                                     sended: true,
                                     goTo: 'https://meet.google.com/inc-jeav-msw',
                                     next: 'goTo.default'
                                 }),
                                 new Message({
-                                    id: 'm1.7r2',
+                                    id: 'm1.8r2',
                                     message: 'Não, voltar ao menu principal',
                                     sended: true,
                                     next: 'm1'
