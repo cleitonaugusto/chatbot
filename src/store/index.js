@@ -482,7 +482,7 @@ const store = createStore({
                             message: `
                                 Dados de contato da 4ª Vara do Trabalho de Porto Velho
                                 <ul>
-                                    <li><a href="https://meet.google.com/qag-djpa-zvu" target="_blank">Balcão Virtual (MEET)</a></li>
+                                    <li><a href="https://meet.google.com/igd-bhjv-bci" target="_blank">Balcão Virtual (MEET)</a></li>
                                     <li><b>Email</b>: <a href="mailto:vtpvh4@trt14.jus.br">vtpvh4@trt14.jus.br</a></li>
                                     <li><b>Telefone</b>: <a href="tel:(69) 3218-6387" title="Ligar">(69) 3218-6387</a></li>
                                     <li><b>Horário de atendimento</b>: Segunda a sexta, das 7:30 às 14:30 em seu horário local.</li>
