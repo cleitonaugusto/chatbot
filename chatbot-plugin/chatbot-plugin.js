@@ -58,6 +58,7 @@ async function chatbot(){
     })
 
     setPosition(position)
+    callOpacity()
 
     messageCloseMobile()
     
@@ -71,12 +72,14 @@ async function chatbot(){
 }
 
 function startPositionSetter(){
-    positionSetter.addEventListener('click', () => {
-        let _open = chatbotState.menu
-        chatbotState.menu = !chatbotState.menu
-        hamburguerMenu(_open)
-    })
-    hamburguerMenu()
+    if(screen.width > 480) {
+        positionSetter.addEventListener('click', () => {
+            let _open = chatbotState.menu
+            chatbotState.menu = !chatbotState.menu
+            hamburguerMenu(_open)
+        })
+        hamburguerMenu()
+    }
 }
 
 function hamburguerMenu(open){
@@ -94,7 +97,6 @@ function hamburguerMenu(open){
             </ul>
         </div>
     `
-
 }
 
 function setPosition(newPosition = 'left'){
@@ -111,7 +113,9 @@ function setPosition(newPosition = 'left'){
     chatBotMessage.classList.add(position)
     chatbotCall.classList.add(position)
 
-    hamburguerMenu()
+    if(screen.width > 480) {
+        hamburguerMenu()
+    }
 }
 
 function messageCloseMobile(){
@@ -119,19 +123,23 @@ function messageCloseMobile(){
         chatbotMessageClose.id = 'chatbot-msg-close'
         chatbotMessageClose.innerHTML = 'x'
         chatBotMessage.append(chatbotMessageClose)
-        chatbotMessageClose.addEventListener('click', callOpacity)        
-        chatbotMessageClose.addEventListener('click', callOpacity)        
+        chatbotMessageClose.addEventListener('click', () => {        
+            localStorage.setItem('dialog-closed', true);
+            callOpacity()
+        })        
     }
 }
 
 const callOpacity = () => {
+    if(localStorage.getItem('dialog-closed')){
         fadeOutEffect(chatBotMessage)
         chatbotCall.classList.add('chatbot-call-opacity')
         portalDivIframe.classList.add('chatbot-call-opacity-active')
         setTimeout(() => {
             chatBotMessage.classList.add('chatbot-d-none')
             chatbotMessageClose.classList.add('chatbot-d-none')
-        }, 500)
+        }, 500)    
+    }
 }
 
 const fadeOutEffect = (fadeTarget) => {
