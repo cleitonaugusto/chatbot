@@ -38,7 +38,8 @@ const User = class User{
             next: newMessage.next,
             options: newMessage.options,
             goTo: newMessage.goTo,
-            input: newMessage.input
+            input: newMessage.input,
+            bold: newMessage.bold
         })
         this.setLastMessage(newMessage.message)
     }

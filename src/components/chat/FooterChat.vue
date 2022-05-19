@@ -1,5 +1,8 @@
 <template>
     <div class="flex items-center px-4 py-1">
+        <div class="flex-none text-right text-white">
+            <img src="../../assets/img/left-arrow.png" style="width: 24px;margin-right: .5em; cursor: pointer" @click="backMenuPrincipal">
+        </div>
         <div class="flex-grow">
             <div class="px-4 py-2 w-full">
                 <div class="relative text-gray-600 focus-within:text-gray-200">
@@ -23,7 +26,7 @@
             </div>
         </div>
         <div class="flex-none text-right text-white">
-            <img src="../../assets/img/send.png" style="width: 24px;margin-right: .5em;" @click="sendMessage">
+            <img src="../../assets/img/send.png" style="width: 24px;margin-right: .5em; cursor: pointer" @click="sendMessage">
         </div>
     </div>
 </template>
@@ -68,6 +71,14 @@ export default {
                     }
                 }
             }
+        },
+        backMenuPrincipal(){
+            this.emitter.emit("option-selected", new Message({
+                id: 'back-menu-principal',
+                message: 'Voltando ao menu principal',
+                sended: true,
+                next: 'm1'
+            }));
         }
     }
 }

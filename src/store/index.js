@@ -16,6 +16,7 @@ const store = createStore({
                     possibleConversations: [
                         new Message({
                             id: 'm0',
+                            bold: true,
                             message: 'Olá, tudo bem? Em que posso ajudar?',
                             next: 'm1'
                         }),
@@ -86,6 +87,7 @@ const store = createStore({
                         new Message({
                             id: 'm1.1',
                             direction: 'vertical',
+                            bold: true,
                             message: '<p>Sabe o número do processo para qual deseja informação?</p>',
                             options: [
                                 new Message({
@@ -117,6 +119,7 @@ const store = createStore({
                         }),
                         new Message({
                             id: 'm1.2.3',
+                            bold: true,
                             message: 'Sabe em qual vara ou cidade o processo tramita?',
                             direction: 'vertical',
                             options: [
@@ -143,6 +146,7 @@ const store = createStore({
                         }),
                         new Message({
                             id: 'm1.2',
+                            bold: true,
                             message: 'Para qual Vara do Trabalho gostaria de atendimento?',
                             input: new MessageInput({
                                 has: true,
@@ -292,6 +296,7 @@ const store = createStore({
                         new Message({
                             id: 'm1.6',
                             direction: 'vertical',
+                            bold: true,
                             message: `Qual serviço você deseja?`,
                             options: [
                                 new Message({
@@ -381,6 +386,7 @@ const store = createStore({
                         }),
                         new Message({
                             id: 'm1.8',
+                            bold: true,
                             message: `Gostaria de ser direcionado para atendimento virtual?`,
                             direction: 'vertical',
                             options: [
