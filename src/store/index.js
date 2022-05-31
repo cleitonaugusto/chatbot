@@ -709,9 +709,8 @@ const store = createStore({
                                 <ul>
                                     <li><a href="https://meet.google.com/xux-aziu-tvt" target="_blank">Balcão Virtual (MEET)</a></li>
                                     <li><b>Email</b>: <a href="mailto:vtguajara@trt14.jus.br">vtguajara@trt14.jus.br</a></li>
-                                    <li><b>Telefone</b>: <a href="tel:(69) 99358 2626" title="Ligar">(69) 99358 2626</a></li>
-                                    <li><b>Telefone</b>: <a href="tel:(69) 99975-3126" title="Ligar">(69) 99975-3126</a></li>
-                                    <li><b>Telefone</b>: <a href="tel:(69) 98432 8699" title="Ligar">(69) 98432 8699</a></li>
+                                    <li><b>Telefone</b>: <a href="tel:(69) 3541-3140" title="Ligar">(69) 3541-3140</a></li>
+                                    <li><b>Whatsapp</b>: <a href="https://wa.me/5569999753126" title="Entrar em contato pelo whatsapp" target="_blank">Whatsapp</a></li>
                                     <li><b>Horário de atendimento</b>: Segunda a sexta, das 7:30 às 14:30 em seu horário local.</li>
                                     <li><b>Endereço</b>: AV. Novo Sertão, N° 1333, 10 de Abril, Guajará-Mirim - RO, CEP: 76850-000</li>
                                 </ul>
